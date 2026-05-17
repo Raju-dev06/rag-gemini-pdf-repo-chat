@@ -64,11 +64,12 @@ public class RepoRagService {
 //    }
 public void processRepository(String repoUrl, String sessionId) {
 
+    File repoDir = null;
     try {
 
         System.out.println("Starting repository processing...");
 
-        File repoDir = gitHubService.cloneRepository(repoUrl);
+        repoDir = gitHubService.cloneRepository(repoUrl);
 
         System.out.println("Repository cloned successfully.");
 
@@ -119,6 +120,10 @@ public void processRepository(String repoUrl, String sessionId) {
         e.printStackTrace();
 
         throw new RuntimeException(e);
+    } finally {
+        if (repoDir != null) {
+            gitHubService.deleteRepository(repoDir);
+        }
     }
 }
 

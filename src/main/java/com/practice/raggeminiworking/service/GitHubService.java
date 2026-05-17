@@ -157,4 +157,23 @@ public class GitHubService {
 
         return files;
     }
+
+    public void deleteRepository(File repoDir) {
+        try {
+            if (repoDir != null && repoDir.exists()) {
+                java.nio.file.Files.walk(repoDir.toPath())
+                        .sorted((a, b) -> b.compareTo(a))
+                        .forEach(p -> {
+                            try {
+                                java.nio.file.Files.delete(p);
+                            } catch (IOException e) {
+                                // Ignore or log
+                            }
+                        });
+                System.out.println("Successfully cleaned up local repository directory: " + repoDir.getName());
+            }
+        } catch (IOException e) {
+            System.err.println("Failed to delete local repository directory: " + e.getMessage());
+        }
+    }
 }
