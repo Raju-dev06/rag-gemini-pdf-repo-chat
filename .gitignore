@@ -40,6 +40,3 @@ build/
 
 # macOS
 .DS_Store
-
-# Temporary cloned repositories
-repos/
