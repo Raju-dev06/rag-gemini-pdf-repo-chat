@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI PDF Chatbot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <h1>📄 AI PDF Chatbot</h1>
+
+    <div class="card">
+
+        <div class="upload-section">
+            <h3>Upload PDF</h3>
+
+            <input type="file" id="pdfFile" accept="application/pdf">
+            <button onclick="uploadPdf()">Upload</button>
+
+            <p id="uploadStatus"></p>
+        </div>
+
+        <hr>
+
+        <div class="repo-section">
+
+            <h3>Upload GitHub Repository</h3>
+
+            <input
+                    type="text"
+                    id="repoUrl"
+                    placeholder="Enter GitHub Repository URL"
+            >
+
+            <button onclick="uploadRepo()">
+                Upload Repository
+            </button>
+
+            <p id="repoStatus"></p>
+
+        </div>
+
+        <hr>
+
+        <div class="chat-section">
+
+            <h3>Ask Question</h3>
+
+            <div class="question-box">
+                <input type="text" id="question" placeholder="Ask something about the PDF...">
+                <button onclick="askQuestion()">Ask</button>
+            </div>
+
+            <p id="loadingStatus"></p>
+
+            <div class="answer-container">
+                <h4>Answer</h4>
+                <div id="answer"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

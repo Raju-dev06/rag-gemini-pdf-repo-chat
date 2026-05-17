@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f4f8;
+    display: flex;
+    justify-content: center;
+    padding: 40px 15px;
+}
+
+.app {
+    width: 100%;
+    max-width: 700px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.08);
+}
+
+.upload-section {
+    margin-bottom: 25px;
+}
+
+input[type="file"] {
+    margin-top: 10px;
+}
+
+.question-box {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background: #4a7cff;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #365fd9;
+}
+
+.answer-container {
+    margin-top: 20px;
+}
+
+#answer {
+    margin-top: 8px;
+    padding: 15px;
+    background: #f6f7fb;
+    border-radius: 8px;
+    min-height: 40px;
+}
+
+#uploadStatus {
+    color: #0b73ff;
+    margin-top: 10px;
+}
+
+#loadingStatus {
+    color: #1a9c52;
+    margin-top: 10px;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+
+    .card {
+        padding: 18px;
+    }
+
+    .question-box {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+.repo-section {
+    margin-top: 25px;
+}
+
+.repo-section input {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
